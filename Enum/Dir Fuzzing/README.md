@@ -1,7 +1,8 @@
 There are lots of tools to perform web directory and files enumeration.
 
 ## gobuster
-gobuster dir -u url -w wordlist
+gobuster dir -u url -w wordlist 
+flag -k for ssl
 
 ## wfuzz
 wfuzz -w wordlist --hc 404 http://url
