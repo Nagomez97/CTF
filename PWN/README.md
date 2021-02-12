@@ -19,7 +19,7 @@ export LD_PRELOAD=./libc-2.27.so
 
 # You can use unset LD_PRELOAD after you finish
 ```
-We can now check in /proc/pid/maps that the binary is loading our libc version.
+We can now check in __/proc/pid/maps__ that the binary is loading our libc version.
 
 ### Running the binary using pwnlib
 ```python
