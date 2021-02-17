@@ -1,14 +1,35 @@
+
+- [PWN](#pwn)
+  * [How to load specific libc version](#how-to-load-specific-libc-version)
+    + [PWNINIT ftw!](#pwninit-ftw-)
+    + [Running the binary patching the ELF](#running-the-binary-patching-the-elf)
+    + [Running the binary using pwnlib](#running-the-binary-using-pwnlib)
+    + [Best way of loading custom libc](#best-way-of-loading-custom-libc)
+- [DEBUGGING](#debugging)
+  * [Debugging exploits with custom libc](#debugging-exploits-with-custom-libc)
+- [Running binaries with nc](#running-binaries-with-nc)
+  * [Run binaries with SOCAT to emulate challenges](#run-binaries-with-socat-to-emulate-challenges)
+  * [PWN Dockers](#pwn-dockers)
+
+---
 # PWN
 
 Nice info for exploiting.
 
-## How to load specific libc version
+## How to load specific libc versiona
 When loading specific libc versions, we will need to use the same **libc** version loader. For example, to load **libc-2.27.so** you'll need **ld-2.27.so**.
 
 To get the loader, you can use [pwninit](https://github.com/io12/pwninit), which will detect the libc version, strip the library and download the ld file.
 
 **IMPORTANT** 
 When loading a binary from the loader (ld.smthg), you will not be able to access debugging symbols during runtime. So it is recommended to write down important functions' offsets to set breakpoints.
+
+### PWNINIT ftw!
+[pwninit](https://github.com/io12/pwninit) is a wonderful tool which will detect the libc version used by your challenge, download the proper linker and unstrip the libc library, all in one!
+
+```
+pwninit --bin <binary> --libc libc.so.6
+```
 
 ### Running the binary patching the ELF
 ```bash
